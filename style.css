@@ -1,1 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=RocknRoll+One&display=swap');
 
+.rocknroll-one-regular {
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.metal-mania-regular {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.new-nav-wrapper{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px, 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.band-logo{
+    height: 50px;
+    margin-left: auto;
+}
+
+.banner-wrapper{
+    background-image: url('LP_Banner.jpg');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Current banner has their name, might add this back later if we change it
+.band-title{
+    font-family: 'Metal Mania', system-ui;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+*/
