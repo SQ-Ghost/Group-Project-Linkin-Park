@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=RocknRoll+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); /* Added a new font */
 
+.metal-mania-regular {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     font-family: 'Open Sans', sans-serif; /* Apply new font */
     display: flex;
@@ -83,6 +89,59 @@ body {
     padding: 10px;
 }
 
+.bordered-container p{
+    text-align: left;
+    margin: 10px 0;
+}
+
+.song-title{
+    text-align: center !important;
+    font-family: 'Metal Mania', system-ui;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn-menu-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.btn-title-text-center {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-title-text-center::before,
+.btn-title-text-center::after {
+    content: '';
+    position: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 15px 0;
+}
+
+.btn-title-text-center::before {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-title-text-center::after {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .btn-container {
     display: flex;
     justify-content: center;
@@ -90,12 +149,76 @@ body {
     margin: 20px 0;
 }
 
+.btn-text-container {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    text-align: center; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-text-container a:hover {
+    background-color: #333; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.btn-container .btn-text-container a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.outside-container{
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-item a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.footer-nav-item a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+}
+
 footer {
+    border-top: 1px solid #ddd;
     margin-top: auto; /* Push footer to the bottom */
-    padding: 10px;
+    padding: 15px 0;
     text-align: center;
     width: 100%;
-    background-color: #f8f8f8; /* Optional footer background */
+    font-size: 0.9em;
+    color: #666;
+    background: linear-gradient(90deg, #f0f0f0, #e0e0e0);
+     /* Optional footer background */
+}
+
+footer p{
+    color: #333;
+    font-size: 0.8em;
 }
 
 @media (max-width: 600px) {
