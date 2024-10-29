@@ -1,109 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=RocknRoll+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); /* Added a new font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
-.metal-mania-regular {
-    font-family: "Metal Mania", system-ui;
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    height: auto;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* Font Specific Styles */
+.metal-mania-regular, .song-title {
+    font-family: 'Metal Mania', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif; /* Apply new font */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Align items at the start */
-    margin: 0;
-    height: auto; /* Changed to auto to allow content to dictate height */
+.song-title {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-bottom: 10px;
     text-align: center;
 }
 
+/* Header Navigation Styles */
 .new-nav-wrapper {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent for aesthetics */
+    background-color: rgba(255, 255, 255, 0.8);
     position: sticky;
     top: 0;
     z-index: 1020;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centered the nav content */
+    justify-content: center;
     padding: 10px 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-content {
+.nav-content, .nav-links {
     display: flex;
-    justify-content: center; /* Centered the nav links */
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
     gap: 20px;
 }
 
-.nav-links a {
+.nav-links a, .footer-nav-item a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s; /* Add a hover effect */
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Change color on hover */
+    color: #007BFF;
 }
 
+/* Banner Styles */
 .banner-wrapper {
-    background-image: url('linkin-park-banner.jpg'); /* Updated banner image */
+    background-image: url('linkin-park-banner.jpg');
     width: 100%;
-    height: 300px; /* Adjust height as needed */
-    background-size: contain; /* Ensure the whole image is visible */
+    height: 300px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Optional: change text color to make it readable */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for better readability */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Band Logo and Content Container Styles */
 .band-logo {
-    max-width: 50%; /* Responsive logo */
+    max-width: 50%;
     height: auto;
-    margin: 20px auto; /* Centered with margin */
+    margin: 20px auto;
 }
 
 .content-container {
-    max-width: 800px; /* Limit width for better readability */
+    max-width: 800px;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Border Container Styles */
 .bordered-container {
-    border: 1px solid #ccc;
+    border: 1px solid #444;
+    padding: 15px;
     margin: 10px 0;
-    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
 }
 
-.bordered-container p{
+.bordered-container p {
     text-align: left;
     margin: 10px 0;
 }
 
-.song-title{
-    text-align: center !important;
-    font-family: 'Metal Mania', system-ui;
-    font-weight: 400;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.btn-menu-title-container {
+/* Button and Title Centering Styles */
+.btn-menu-title-container, .btn-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,34 +131,25 @@ body {
 .btn-title-text-center::before,
 .btn-title-text-center::after {
     content: '';
-    position: block;
+    position: absolute;
     width: 100%;
     height: 2px;
     background-color: black;
-    margin: 15px 0;
 }
 
 .btn-title-text-center::before {
-    position: absolute;
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .btn-title-text-center::after {
-    position: absolute;
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between buttons */
-    margin: 20px 0;
-}
-
+/* Button Styles */
 .btn-text-container {
     display: inline-block;
     padding: 10px 20px;
@@ -156,30 +157,48 @@ body {
     color: white !important;
     font-weight: bold;
     text-decoration: none !important;
-    text-align: center; 
+    text-align: center;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.btn-text-container a:hover {
-    background-color: #333; /* Darker background on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+.btn-text-container:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.btn-container .btn-text-container a {
-    color: white !important;
+a, .btn-container .btn-text-container a {
+    color: #1e90ff;
     text-decoration: none !important;
+    font-weight: bold;
 }
 
-.outside-container{
-    width: 100%;
-    background-color: #f1f1f1;
+a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styles */
+footer {
+    border-top: 1px solid #ddd;
+    margin-top: auto;
     padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 0.9em;
+    color: #666;
+    background-color: #1a1a1a;
+    background: linear-gradient(90deg, #f0f0f0, #e0e0e0);
 }
 
-.footer-nav{
+footer p {
+    color: #333;
+    font-size: 0.8em;
+}
+
+/* Footer Navigation Styles */
+.footer-nav {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -191,10 +210,7 @@ body {
 .footer-nav-item a {
     display: inline-block;
     padding: 8px 15px;
-    background-color: transparent;;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    background-color: transparent;
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -204,26 +220,10 @@ body {
     border-radius: 3px;
 }
 
-footer {
-    border-top: 1px solid #ddd;
-    margin-top: auto; /* Push footer to the bottom */
-    padding: 15px 0;
-    text-align: center;
-    width: 100%;
-    font-size: 0.9em;
-    color: #666;
-    background: linear-gradient(90deg, #f0f0f0, #e0e0e0);
-     /* Optional footer background */
-}
-
-footer p{
-    color: #333;
-    font-size: 0.8em;
-}
-
+/* Responsive Design for Small Screens */
 @media (max-width: 600px) {
     .banner-wrapper {
-        height: 200px; /* Adjust height for smaller screens */
+        height: 200px;
     }
 
     .content-container {
@@ -232,6 +232,14 @@ footer p{
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically on small screens */
+        flex-direction: column;
     }
+}
+
+.member-photo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: makes the image circular */
+    margin-right: 10px;
+    vertical-align: middle;
 }
